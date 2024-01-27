@@ -1,0 +1,5 @@
+const pi = Math.PI.toFixed(3)
+let radius = (Math.random()*20).toFixed(2)
+console.log ('Random radius of circle:', radius)
+let circleArea = pi*(Math.pow(radius, 2))
+console.log ('Calculated area of the circle is', circleArea.toFixed(3))
