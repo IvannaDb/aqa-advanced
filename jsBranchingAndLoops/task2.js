@@ -1,6 +1,6 @@
 import chalk from "chalk"
 
-const averageGrade = (Math.random()*100).toFixed(2)
+const averageGrade = Math.round(Math.random()*100)
 console.log('Average Grade is', averageGrade)
 
 switch (true){
