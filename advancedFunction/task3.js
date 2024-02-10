@@ -1,5 +1,5 @@
 function divide (numerator, denominator) {
-    try{
+
         if (denominator === 0) {
             throw new Error("Ділення на нуль недопустиме!")
         }
@@ -8,11 +8,6 @@ function divide (numerator, denominator) {
         }
         const resultOfDivision = numerator/denominator
         return resultOfDivision
-
-    } catch (error) { 
-        console.log (error.message)  
-        //throw error;
-    } 
 }
 try {
     console.log(divide(35, 2))  
