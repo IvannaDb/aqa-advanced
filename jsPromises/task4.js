@@ -1,10 +1,10 @@
-import toDoFetcher from "./toDoFetcher.js"
-import userFetcher from "./usersFetcher.js"
+import ToDoFetcher from "./toDoFetcher.js"
+import UserFetcher from "./usersFetcher.js"
 
-Promise.all([toDoFetcher.fetchTodo(), userFetcher.fetchUser()])
+Promise.all([ToDoFetcher.fetchTodo(), UserFetcher.fetchUser()])
     .then(([todo, user]) => console.log('All result:', todo, user))
     .catch(error => console.error('Error:', error));
 
-Promise.race([toDoFetcher.fetchTodo(), userFetcher.fetchUser()])
+Promise.race([ToDoFetcher.fetchTodo(), UserFetcher.fetchUser()])
     .then(result => console.log('Race result:', result))
     .catch(error => console.error('Error:', error));

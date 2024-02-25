@@ -1,4 +1,4 @@
-export default class toDoFetcher {
+export default class ToDoFetcher {
     static async fetchTodo() {
         try {
             const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');

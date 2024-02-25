@@ -1,6 +1,9 @@
 const BASE_URL = 'https://jsonplaceholder.typicode.com/'
-fetch (BASE_URL+'todos/1')
-    .then(response => response.json())
+
+function fetchTodo() {
+    return fetch(BASE_URL + 'todos/1')
+        .then(response => response.json());
+}
     // .then(data => {
     //     console.log('GET Response of Todo:', data);
     // })
@@ -8,8 +11,10 @@ fetch (BASE_URL+'todos/1')
     //     console.error('Error:', error);
     // })
 
-fetch (BASE_URL+'users/1')
+function fetchUser () {
+    return fetch (BASE_URL+'users/1')
     .then (response => response.json())
+}
     // .then (data => {
     //     console.log ('GET Responce of User:', data)
     // })

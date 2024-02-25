@@ -1,4 +1,4 @@
-export default class userFetcher {
+export default class UserFetcher {
     static async fetchUser() {
         try{
             const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
