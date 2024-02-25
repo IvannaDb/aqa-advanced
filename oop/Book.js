@@ -38,15 +38,11 @@ export default class Book {
     printInfo() {
         console.log(`Name of book: ${this._title}, Author: ${this._author}, Year: ${this._year}`)
     }
-    static findOldestBook(books){
-            let oldestBook = books[0]
-            for (let i = 1; i < books.length; i++) {
-                if (books[i].year < oldestBook.year) {
-                    oldestBook = books[i]
-                }
-            }
-            return oldestBook
-        }
+    static findOldestBook(books) {
+        return books.reduce(function(oldestBook, currentBook) {
+            return currentBook.year < oldestBook.year ? currentBook : oldestBook;
+        }, books[0]);
+    }
     }
     
 
